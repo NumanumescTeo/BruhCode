@@ -1,0 +1,47 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+	double n1, n2;
+	char op;
+
+	cout << "-------------------------------------" << endl;
+	cout << "|            CALCULATOR             |"<< endl;
+	cout << "-------------------------------------" << endl;
+
+	cout << "Ce operatie vrei sa efectuezi? (+,-,*,/) :";
+	cin >> op;
+
+	cout << "----------------------------------------------------" << endl;
+	 
+	cout << "Introdu primul numar urmat de al doinlea numar: ";
+	cin >> n1 >> n2;
+
+	cout << "----------------------------------------------------" << endl;
+		
+	switch (op)
+	{
+	case '+':
+		cout << n1 << "+" << n2 << "=" << (n1 + n2);
+
+	case '-':
+		cout << n1 << "-" << n2 << "=" << (n1 - n2);
+
+	case '*':
+		cout << n1 << "*" << n2 << "=" << (n1 * n2);
+
+	case '/':
+		if (n2 != 0) {
+			cout << n1 << "/" << n2 << "=" << (n1 / n2);
+		}
+		else {
+			cout << "Nu se poate imparti...";
+		}
+	
+	}
+
+	return 0;
+}
